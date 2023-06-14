@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="4b518d99-a17b-4a0a-aca4-6d594b715c5d" name="server" url="http://home527657875.1and1-data.host">
+        <fileTransfer rootFolder="/contao" accessType="SFTP" host="home527657875.1and1-data.host" port="22" sshConfigId="67cc4d1a-e0ef-452f-b2c7-491f45ae607d" sshConfig="server">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
