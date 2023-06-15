@@ -1,0 +1,41 @@
+
+<div class="event layout_full block<?= $this->class ?>" itemscope itemtype="http://schema.org/Event">
+
+  <h2 itemprop="name"><?= $this->title ?></h2>
+
+  <?php if ($this->recurring): ?>
+    <p class="info recurring"><?= $this->recurring ?></p>
+  <?php else: ?>
+
+      <p class="info">
+          <span class="weekday"><?php echo $this->parseDate("D", $this->startDate); ?></span>
+          <span class="day"><?php echo $this->parseDate("j.", $this->startDate); ?></span>
+          <span class="month"><?php echo $this->parseDate("M", $this->startDate); ?></span>
+          <span class="year"><?php echo $this->parseDate("Y", $this->startDate); ?></span>
+          <?php if($this->time): ?><span class="hour"><?php echo $this->parseDate("H:i ", $this->startTime); ?> Uhr</span><?php endif; ?>
+      </p>
+
+  <?php endif; ?>
+
+  <?php if ($this->location): ?>
+    <p class="location" itemprop="location" itemscope itemtype="http://schema.org/Place">
+      <span itemprop="name"><?= $this->location ?></span>
+      <?php if ($this->address): ?>
+        (<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><?= $this->address ?></span>)
+      <?php endif; ?>
+    </p>
+  <?php endif; ?>
+
+  <?= $this->teaser ?>
+
+  <?php if ($this->enclosure): ?>
+    <ul class="enclosure">
+      <?php foreach ($this->enclosure as $enclosure): ?>
+        <li class="download-element ext-<?= $enclosure['extension'] ?>">
+           <a href="<?= $enclosure['href'] ?>" title="<?= $enclosure['title'] ?>"><?= $enclosure['link'] ?> <span class="size">(<?= $enclosure['filesize'] ?>)</span></a>
+        </li>
+      <?php endforeach; ?>
+    </ul>
+  <?php endif; ?>
+
+</div>

@@ -1,0 +1,9 @@
+
+<div class="event layout_upcoming<?= $this->classUpcoming ?>" itemscope itemtype="http://schema.org/Event">
+
+  <h3><a href="<?= $this->href ?>" title="<?= $this->title ?> (<?php if ($this->day): ?><?= $this->day ?>, <?php endif; ?><?= $this->date ?> <?php if ($this->time): ?> <?= $this->time ?><?php endif; ?>)"<?= $this->target ?> itemprop="url"><?= $this->link ?></a></h3>
+
+    <?= $this->teaser ?>
+
+    <p class="more"><a href="<?= $this->href ?>">Event ansehen</a></p>
+</div>

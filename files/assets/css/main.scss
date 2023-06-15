@@ -1,0 +1,61 @@
+.ce_hyperlink.block {
+  text-align: center;
+  margin: 20px auto;
+  a {
+    text-decoration: none;
+    color: white;
+    background: #1b7d91;
+    padding: 10px 20px;
+    font-style: italic;
+    font-weight: normal;
+    letter-spacing: 1px;
+    font-size: 19px;
+    transition: color 250ms, background-color 250ms;
+    &:hover {
+      color: #1b7d91;
+      background-color: white;
+     /* border: 2px solid #117d92;
+      display: inline-block;*/
+    }
+  }
+}
+
+.ce_form .widget select {
+  width: 78%;
+  border: none;
+  background: #b8d8de;
+  padding: 5px 8px;
+  cursor: pointer;
+  transition: background-color 250ms;
+  font-family: "Manuale", serif;
+  outline: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  &:hover {
+    background-color: #d0e5e9;
+  }
+}
+
+.ce_form .widget #ctrl_30_wrapper {
+  display: inline;
+}
+
+.ce_form .widget.widget-explanation.explanation {
+  p {
+    font-size: 15px;
+    color: #5c6367;
+  }
+}
+
+.ce_form #contract .widget label {
+  width: 22%;
+  margin: 6px auto;
+}
+
+.ce_form #contract .widget input,
+.ce_form #contract  .widget textarea {
+  color: white;
+  font-weight: 600;
+}
